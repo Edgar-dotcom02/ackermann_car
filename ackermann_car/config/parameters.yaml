@@ -1,0 +1,54 @@
+/**:
+  ros__parameters:
+    # Vehicle model parameters
+
+    # Body params
+    body_length: 0.3 # m
+    body_width: 0.18 # n
+    body_height: 0.05 # m
+    body_density: 7850.0 # steel, kg/m^3
+
+    # Wheel params
+    wheel_radius: 0.04 # m
+    wheel_width: 0.02 # m
+    wheel_density: 900.0 # kg/m^3
+
+    # Kinematics and dynamics params
+    max_steering_angle: 0.6108652 # rad
+    max_steering_angular_velocity: 1.570796 # rad/s
+    max_steering_effort: 1.0 # max steering torque [Nm]
+    max_velocity: 2.0 # max wheel velocity [m/s]
+    max_effort: 10.0 # max wheel torque [Nm]
+
+    # Camera and image params
+    camera_box_size: 0.05 # Size of the camera enclosure [m]
+    camera_stick_size: 0.02 # Size of the camera stick [m]
+    camera_height: 0.2 # Height of the camera above the body_link [m]
+    camera_pitch: 0.698131 # Pitch angle of the camera relative to body_link [rad]
+    camera_fov: 1.3962634 # Field of view of the camera [rad]
+    camera_fps: 30 # Frames per second for camera capture [Hz]
+    image_width: 640 # Width of the camera's image output [pixels]
+    image_height: 480 # Height of the camera's image output [pixels]
+
+
+    # Odom node params
+    odom_frame: odom
+    base_frame: body_link
+    cmd_timeout: 2.0
+
+
+    # Path follower params
+    csv_path: /home/edgar_dotcom/ros2_ws/src/ackermann_car/logs/path.csv
+    traj_save_path: /home/edgar_dotcom/ros2_ws/src/ackermann_car/logs/trajectory.csv
+    target_speed: 0.3 # m/s
+    wheelbase: 0.22 # m
+    max_steer: 0.6108652 # rad
+    lookahead_coef: 1.0 # lookahead dist coeff for pure pursuit controller
+    control_hz: 20.0 # hz
+    goal_tolerance: 0.05 # m
+    mission_timeout: 60.0 # s
+    
+    ctrl_mode: "pid"   # "pure_pursuit" or "pid"
+    kp: 1.2
+    ki: 0.01
+    kd: 0.3
