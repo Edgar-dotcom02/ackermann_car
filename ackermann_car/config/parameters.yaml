@@ -38,8 +38,8 @@
 
 
     # Path follower params
-    csv_path: /home/edgar_dotcom/ros2_ws/src/ackermann_car/logs/path.csv
-    traj_save_path: /home/edgar_dotcom/ros2_ws/src/ackermann_car/logs/trajectory.csv
+    csv_path: your_ws/ros2_ws/src/ackermann_car/logs/path.csv # change to your path
+    traj_save_path: your_ws/src/ackermann_car/logs/trajectory.csv
     target_speed: 0.3 # m/s
     wheelbase: 0.22 # m
     max_steer: 0.6108652 # rad
